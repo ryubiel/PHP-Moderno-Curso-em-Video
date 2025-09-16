@@ -9,18 +9,24 @@
 <body>
     <<?php 
         // Capturando os dados do Formulário Retroalimentado
-        $nasc = $_GET['nasc'] ?? '';
-        $ano = $_GET['ano'] ?? '';
-        $aatual = date(y);
+        $v1 = $_GET['v1'] ?? '';
+        $p1 = $_GET['p1'] ?? '';
+        $v2 = $_GET['v2'] ?? '';
+        $p2 = $_GET['p2'] ?? '';
+ 
     ?>
     <main>
-        <h1>Calculando a sua idade</h1>
+        <h1>Médias aritméticas</h1>
         <form action="<?=$_SERVER['PHP_SELF']?>" method="get">
-            <label for="nasc">Em que ano você nasceu?</label>
-            <input type="number" name="nasc" id="nasc" min="0" value="<?=$nasc?>" required>
-            <label for="ano">Quer saber sua idade em que ano? (atualmente estamos em <strong><?=$aatual?></strong>)</label>
-            <input type="number" name="ano" id="ano" min="0" value="<?=$ano?>" required>
-            <input type="submit" value="Qual será minha idade?">
+            <label for="v1">1° Valor</label>
+            <input type="number" name="v1" id="v1" min="0" value="<?=$v1?>" required>
+            <label for="p1">1° Peso</label>
+            <input type="number" name="p1" id="p1" min="0" value="<?=$p1?>" required>
+            <label for="v2">2° Valor</label>
+            <input type="number" name="v2" id="v2" min="0" value="<?=$v2?>" required>
+            <label for="p2">2° Peso</label>
+            <input type="number" name="p2" id="p2" min="0" value="<?=$p2?>" required>
+            <input type="submit" value="Calcular Raízes">
         </form>
 
         <section>   
